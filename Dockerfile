@@ -1,5 +1,5 @@
 # chekote/yarn
-FROM chekote/node:7.5.0
+FROM chekote/node:7.5.0-a
 
 USER root
 
@@ -22,9 +22,3 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-USER node
-
-VOLUME ["/data"]
-WORKDIR /data
-
-ENTRYPOINT ["/bin/bash", "-c"]
