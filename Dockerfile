@@ -1,5 +1,5 @@
 # chekote/yarn
-FROM chekote/node:7.5.0-a
+FROM chekote/node:7.8.0
 
 USER root
 
