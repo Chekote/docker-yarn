@@ -1,11 +1,11 @@
 # chekote/yarn
-FROM chekote/node:7.8.0-b
+FROM chekote/node:7.9.0
 
 ENV DEBIAN_FRONTEND noninteractive
 
     # install yarn repo deps (TLS transport)
 RUN apt-get update && \
-    apt-get install apt-transport-https && \
+    apt-get install -y --no-install-recommends apt-transport-https && \
 
     # configure yarn repo
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
@@ -13,7 +13,7 @@ RUN apt-get update && \
 
     # install yarn
     apt-get update && \
-    apt-get install -y yarn && \
+    apt-get install -y --no-install-recommends yarn && \
 
     # cleanup
     apt-get autoremove -y && \
