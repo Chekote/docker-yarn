@@ -18,5 +18,6 @@ RUN apt-get update && \
     # cleanup
     apt-get autoremove -y && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* && \
+    rm -rf /var/cache/apt/*
 
