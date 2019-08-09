@@ -1,5 +1,5 @@
 # chekote/yarn
-FROM chekote/node:7.9.0
+FROM chekote/node:11.14.0
 
 ENV DEBIAN_FRONTEND noninteractive
 
